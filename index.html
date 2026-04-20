@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vintage Castle Wedding</title>
-  <meta name="description" content="Vintage svadobný web v štýle zámockej svadby." />
+  <title>Old Money Château Wedding</title>
+  <meta name="description" content="Luxusný svadobný web v old money štýle s atmosférou francúzskeho château." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f0e7;
-      --bg-soft: #fbf8f3;
-      --paper: rgba(255,255,255,0.72);
-      --paper-strong: rgba(255,255,255,0.84);
-      --text: #32261d;
-      --muted: #746457;
-      --line: rgba(92, 72, 56, 0.16);
-      --gold: #b9975b;
-      --gold-deep: #8f6a33;
-      --rose: #b7847a;
-      --shadow: 0 18px 45px rgba(50, 38, 29, 0.10);
-      --radius-lg: 28px;
+      --bg: #f7f1e7;
+      --bg-deep: #efe3cf;
+      --paper: rgba(255, 251, 244, 0.80);
+      --paper-strong: rgba(255, 252, 247, 0.90);
+      --text: #2f2219;
+      --muted: #6f5d4e;
+      --gold: #b89654;
+      --gold-soft: #d9c08b;
+      --gold-deep: #8a672f;
+      --line: rgba(108, 84, 60, 0.16);
+      --shadow: 0 22px 55px rgba(47, 34, 25, 0.12);
+      --radius-xl: 34px;
+      --radius-lg: 26px;
       --radius-md: 20px;
-      --radius-sm: 14px;
-      --max: 1180px;
+      --max: 1220px;
     }
 
     * { box-sizing: border-box; }
@@ -34,10 +34,10 @@
       font-family: 'Inter', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(191, 162, 115, 0.10), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(183, 132, 122, 0.08), transparent 28%),
-        linear-gradient(180deg, #f9f3ea 0%, #f4ecdf 100%);
-      line-height: 1.6;
+        radial-gradient(circle at 15% 10%, rgba(184, 150, 84, 0.12), transparent 22%),
+        radial-gradient(circle at 85% 20%, rgba(217, 192, 139, 0.14), transparent 20%),
+        linear-gradient(180deg, #fbf7f0 0%, #f6eedf 52%, #f2e6d2 100%);
+      line-height: 1.65;
       overflow-x: hidden;
     }
 
@@ -47,9 +47,16 @@
       inset: 0;
       pointer-events: none;
       opacity: 0.22;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23b9975b' stroke-opacity='0.12'%3E%3Cpath d='M80 14c8 15 15 22 30 30-15 8-22 15-30 30-8-15-15-22-30-30 15-8 22-15 30-30Z'/%3E%3Cpath d='M80 86c5 9 9 13 18 18-9 5-13 9-18 18-5-9-9-13-18-18 9-5 13-9 18-18Z'/%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23b89654' stroke-opacity='0.13' stroke-width='1.1'%3E%3Cpath d='M120 26c7 19 16 28 35 35-19 7-28 16-35 35-7-19-16-28-35-35 19-7 28-16 35-35Z'/%3E%3Cpath d='M120 144c5 11 10 16 21 21-11 5-16 10-21 21-5-11-10-16-21-21 11-5 16-10 21-21Z'/%3E%3Cpath d='M40 120c4 8 8 12 16 16-8 4-12 8-16 16-4-8-8-12-16-16 8-4 12-8 16-16Z'/%3E%3Cpath d='M200 120c4 8 8 12 16 16-8 4-12 8-16 16-4-8-8-12-16-16 8-4 12-8 16-16Z'/%3E%3C/g%3E%3C/svg%3E");
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 12px;
+      border: 1px solid rgba(184, 150, 84, 0.12);
+      pointer-events: none;
       z-index: 0;
     }
 
@@ -57,7 +64,7 @@
     a { color: inherit; text-decoration: none; }
 
     .container {
-      width: min(calc(100% - 32px), var(--max));
+      width: min(calc(100% - 34px), var(--max));
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -68,16 +75,17 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(18px);
-      background: rgba(248, 241, 231, 0.72);
-      border-bottom: 1px solid rgba(92, 72, 56, 0.09);
+      background: rgba(250, 243, 232, 0.72);
+      border-bottom: 1px solid rgba(108, 84, 60, 0.10);
+      box-shadow: 0 8px 26px rgba(47, 34, 25, 0.04);
     }
 
     .nav {
+      min-height: 84px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 76px;
-      gap: 24px;
+      gap: 28px;
     }
 
     .brand {
@@ -87,59 +95,60 @@
     }
 
     .brand small {
+      margin-bottom: 9px;
       font-size: 0.72rem;
-      letter-spacing: 0.28em;
       text-transform: uppercase;
+      letter-spacing: 0.34em;
       color: var(--gold-deep);
-      margin-bottom: 8px;
     }
 
     .brand strong {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      font-size: 1.8rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.06em;
+      font-weight: 600;
     }
 
     .menu {
       display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
       align-items: center;
       justify-content: flex-end;
-      font-size: 0.95rem;
+      flex-wrap: wrap;
+      gap: 18px;
       color: var(--muted);
+      font-size: 0.94rem;
     }
 
     .menu a {
       position: relative;
-      padding-bottom: 4px;
+      padding: 8px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
     }
 
     .menu a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 2px;
       width: 100%;
       height: 1px;
-      background: var(--gold);
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
       transform: scaleX(0);
-      transform-origin: center;
       transition: transform 0.3s ease;
     }
 
     .menu a:hover::after,
-    .menu a:focus-visible::after {
-      transform: scaleX(1);
-    }
+    .menu a:focus-visible::after { transform: scaleX(1); }
 
     .hero {
-      padding: 78px 0 34px;
+      padding: 84px 0 40px;
     }
 
     .hero-wrap {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+      grid-template-columns: 1.06fr 0.94fr;
       gap: 30px;
       align-items: stretch;
     }
@@ -147,28 +156,40 @@
     .hero-card,
     .hero-image,
     .panel,
+    .quote-card,
     .rsvp-card,
-    .quote-card {
+    .card,
+    .crest-card {
       background: var(--paper);
-      border: 1px solid rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.58);
       box-shadow: var(--shadow);
       backdrop-filter: blur(12px);
-    }
-
-    .hero-card {
-      border-radius: var(--radius-lg);
-      padding: 56px clamp(28px, 4vw, 58px);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-card::before {
+    .ornate-frame::before {
       content: "";
       position: absolute;
-      inset: 16px;
-      border: 1px solid rgba(185, 151, 91, 0.22);
-      border-radius: calc(var(--radius-lg) - 8px);
+      inset: 14px;
+      border: 1px solid rgba(184,150,84,0.20);
+      border-radius: inherit;
       pointer-events: none;
+    }
+
+    .ornate-frame::after {
+      content: "✦";
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      color: rgba(184,150,84,0.42);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-xl);
+      padding: 62px clamp(28px, 5vw, 64px);
     }
 
     .eyebrow {
@@ -176,37 +197,58 @@
       align-items: center;
       gap: 12px;
       margin-bottom: 20px;
-      color: var(--gold-deep);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
       font-size: 0.74rem;
+      color: var(--gold-deep);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
     }
 
     .eyebrow::before,
     .eyebrow::after {
       content: "";
-      width: 42px;
+      width: 44px;
       height: 1px;
-      background: rgba(143,106,51,0.45);
+      background: linear-gradient(90deg, transparent, rgba(138,103,47,0.6), transparent);
     }
 
     h1, h2, h3 {
       margin: 0;
-      font-family: 'Cormorant Garamond', serif;
-      line-height: 1.05;
-      font-weight: 700;
+      line-height: 1.08;
+      color: var(--text);
     }
 
     h1 {
-      font-size: clamp(3.2rem, 7vw, 6rem);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(3rem, 6.4vw, 5.4rem);
+      letter-spacing: 0.04em;
       margin-bottom: 18px;
-      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 4.8vw, 4.3rem);
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .amp {
+      color: var(--gold-deep);
+      font-weight: 400;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      letter-spacing: 0;
     }
 
     .hero-subtitle {
-      max-width: 620px;
-      font-size: 1.04rem;
+      max-width: 640px;
       color: var(--muted);
+      font-size: 1.02rem;
       margin-bottom: 34px;
     }
 
@@ -218,24 +260,26 @@
     }
 
     .meta-item {
-      background: rgba(255,255,255,0.52);
-      border: 1px solid rgba(185, 151, 91, 0.14);
-      border-radius: 18px;
-      padding: 16px 14px;
+      border-radius: 20px;
+      padding: 18px 16px;
+      background: rgba(255,255,255,0.54);
+      border: 1px solid rgba(184,150,84,0.14);
+      text-align: center;
     }
 
     .meta-label {
       display: block;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
+      margin-bottom: 8px;
+      font-size: 0.72rem;
       color: var(--gold-deep);
-      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.20em;
     }
 
     .meta-value {
+      display: block;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.45rem;
+      font-size: 1.5rem;
       font-weight: 600;
     }
 
@@ -249,47 +293,44 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 50px;
-      padding: 0 22px;
+      min-height: 52px;
+      padding: 0 24px;
       border-radius: 999px;
-      border: 1px solid transparent;
       font-weight: 500;
+      border: 1px solid transparent;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     }
 
     .btn:hover,
     .btn:focus-visible {
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(50, 38, 29, 0.12);
+      box-shadow: 0 12px 26px rgba(47,34,25,0.12);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--gold) 0%, #d6b57a 100%);
+      background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold) 45%, var(--gold-soft) 100%);
       color: #fff;
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.55);
-      border-color: rgba(92, 72, 56, 0.14);
+      background: rgba(255,255,255,0.56);
+      border-color: rgba(108,84,60,0.14);
       color: var(--text);
     }
 
     .hero-image {
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-xl);
       min-height: 100%;
-      overflow: hidden;
-      position: relative;
       background:
-        linear-gradient(rgba(39, 28, 22, 0.28), rgba(39, 28, 22, 0.28)),
-        url('https://images.unsplash.com/photo-1519167758481-83f29c5d8d82?auto=format&fit=crop&w=1200&q=80') center/cover;
+        linear-gradient(rgba(40,29,22,0.30), rgba(40,29,22,0.22)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') center/cover;
     }
 
-    .hero-image::before {
-      content: "";
+    .hero-image .inner-border {
       position: absolute;
-      inset: 18px;
-      border: 1px solid rgba(255,255,255,0.4);
-      border-radius: calc(var(--radius-lg) - 8px);
+      inset: 16px;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: calc(var(--radius-xl) - 8px);
     }
 
     .hero-overlay {
@@ -297,39 +338,41 @@
       left: 28px;
       right: 28px;
       bottom: 28px;
+      padding: 24px;
+      border-radius: 24px;
       background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.24);
       backdrop-filter: blur(8px);
       color: #fff;
-      border-radius: 22px;
-      padding: 22px;
     }
 
     .hero-overlay span {
       display: block;
-      font-size: 0.75rem;
+      margin-bottom: 8px;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.22em;
-      opacity: 0.85;
-      margin-bottom: 8px;
+      opacity: 0.88;
     }
 
     .hero-overlay strong {
+      display: block;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
+      font-size: 2.1rem;
+      line-height: 1.1;
       font-weight: 600;
     }
 
     section {
-      padding: 34px 0;
+      padding: 36px 0;
       position: relative;
       z-index: 1;
     }
 
     .section-head {
+      max-width: 780px;
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 28px;
+      margin: 0 auto 30px;
     }
 
     .section-head p {
@@ -337,42 +380,108 @@
       color: var(--muted);
     }
 
-    h2 {
-      font-size: clamp(2.3rem, 4.5vw, 4rem);
-      margin-top: 6px;
-    }
-
     .ornament {
       display: inline-block;
+      font-size: 0.78rem;
       color: var(--gold-deep);
-      font-size: 1rem;
-      letter-spacing: 0.35em;
       text-transform: uppercase;
+      letter-spacing: 0.36em;
+      position: relative;
+      padding: 0 18px;
     }
 
+    .ornament::before,
+    .ornament::after {
+      content: "✦";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.74rem;
+      color: rgba(184,150,84,0.7);
+    }
+
+    .ornament::before { left: 0; }
+    .ornament::after { right: 0; }
+
     .story-grid,
-    .info-grid,
     .schedule-grid,
+    .info-grid,
     .details-grid,
     .gallery-grid,
-    .footer-grid {
+    .footer-grid,
+    .rsvp-wrap,
+    .intro-grid {
       display: grid;
       gap: 24px;
     }
 
+    .intro-grid {
+      grid-template-columns: 0.78fr 1.22fr;
+      align-items: stretch;
+      margin-top: 8px;
+    }
+
+    .crest-card {
+      border-radius: var(--radius-xl);
+      padding: 32px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+      text-align: center;
+    }
+
+    .crest {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 1 / 1.15;
+      border: 1px solid rgba(184,150,84,0.20);
+      border-radius: 46% 46% 38% 38% / 34% 34% 50% 50%;
+      display: grid;
+      place-items: center;
+      padding: 26px;
+      background: radial-gradient(circle at top, rgba(217,192,139,0.14), rgba(255,255,255,0.18));
+      box-shadow: inset 0 0 0 10px rgba(255,255,255,0.16);
+    }
+
+    .crest small {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold-deep);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.68rem;
+    }
+
+    .crest strong {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 3.3rem;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .crest span {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--muted);
+    }
+
     .story-grid {
-      grid-template-columns: 0.95fr 1.05fr;
+      grid-template-columns: 0.96fr 1.04fr;
       align-items: stretch;
     }
 
     .image-panel {
-      min-height: 520px;
-      border-radius: var(--radius-lg);
+      min-height: 560px;
+      border-radius: var(--radius-xl);
       overflow: hidden;
-      background:
-        linear-gradient(rgba(48,36,29,0.18), rgba(48,36,29,0.18)),
-        url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80') center/cover;
       box-shadow: var(--shadow);
+      background:
+        linear-gradient(rgba(43, 31, 24, 0.22), rgba(43, 31, 24, 0.18)),
+        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80') center/cover;
       position: relative;
     }
 
@@ -380,25 +489,33 @@
       content: "";
       position: absolute;
       inset: 16px;
-      border-radius: calc(var(--radius-lg) - 6px);
       border: 1px solid rgba(255,255,255,0.42);
+      border-radius: calc(var(--radius-xl) - 8px);
     }
 
-    .panel {
-      border-radius: var(--radius-lg);
+    .panel,
+    .quote-card,
+    .rsvp-card,
+    .card {
+      border-radius: var(--radius-xl);
       padding: 34px;
     }
 
-    .panel p {
+    .panel p,
+    .card p,
+    .card li,
+    .quote-card p,
+    .tiny,
+    .form-note,
+    label {
       color: var(--muted);
-      margin: 0 0 16px;
     }
 
     .dropcap:first-letter {
       float: left;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      line-height: 0.9;
+      font-size: 4.4rem;
+      line-height: 0.88;
       padding-right: 10px;
       color: var(--gold-deep);
       font-weight: 700;
@@ -412,7 +529,7 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 110px 1fr;
+      grid-template-columns: 108px 1fr;
       gap: 18px;
       align-items: start;
       padding-bottom: 18px;
@@ -426,88 +543,47 @@
 
     .timeline-time {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
+      font-size: 1.68rem;
       color: var(--gold-deep);
-      font-weight: 600;
-    }
-
-    .timeline-item h3 {
-      font-size: 1.55rem;
-      margin-bottom: 6px;
+      font-weight: 700;
     }
 
     .quote-card {
-      border-radius: var(--radius-lg);
-      padding: 34px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
-
-    .quote-card::before,
-    .quote-card::after {
-      content: "✦";
-      position: absolute;
-      font-size: 1rem;
-      color: rgba(185, 151, 91, 0.42);
-    }
-
-    .quote-card::before { top: 18px; left: 24px; }
-    .quote-card::after { bottom: 18px; right: 24px; }
 
     blockquote {
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-size: clamp(1.9rem, 3vw, 3rem);
       line-height: 1.2;
+      font-style: italic;
     }
 
-    .quote-card p {
-      margin: 12px 0 0;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.78rem;
-    }
+    .schedule-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .info-grid, .details-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
-    .schedule-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .info-grid,
-    .details-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .card {
-      background: var(--paper-strong);
-      border: 1px solid rgba(92,72,56,0.08);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .card h3 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-
-    .card p,
-    .card li {
-      color: var(--muted);
-    }
+    .card h3 { margin-bottom: 10px; }
 
     .icon-badge {
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      background: rgba(185, 151, 91, 0.14);
-      color: var(--gold-deep);
-      font-size: 1.2rem;
       margin-bottom: 16px;
+      background: radial-gradient(circle at top, rgba(217,192,139,0.26), rgba(184,150,84,0.10));
+      color: var(--gold-deep);
+      border: 1px solid rgba(184,150,84,0.18);
+      font-size: 1.2rem;
+    }
+
+    .separator {
+      width: 100%;
+      height: 1px;
+      margin: 6px 0 16px;
+      background: linear-gradient(90deg, transparent, rgba(184,150,84,0.55), transparent);
     }
 
     ul.clean {
@@ -519,16 +595,16 @@
     }
 
     .gallery-grid {
-      grid-template-columns: 1.15fr 0.85fr 0.85fr;
-      grid-template-rows: 280px 280px;
+      grid-template-columns: 1.12fr 0.88fr 0.88fr;
+      grid-template-rows: 300px 300px;
     }
 
     .gallery-item {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      position: relative;
       min-height: 220px;
+      border-radius: 26px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
       background-size: cover;
       background-position: center;
     }
@@ -537,30 +613,23 @@
       content: "";
       position: absolute;
       inset: 12px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.34);
+      border: 1px solid rgba(255,255,255,0.36);
+      border-radius: 20px;
     }
 
     .gallery-item.large {
       grid-row: span 2;
-      background-image: linear-gradient(rgba(40,30,24,0.15), rgba(40,30,24,0.15)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80');
+      background-image: linear-gradient(rgba(40,29,22,0.15), rgba(40,29,22,0.15)), url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1400&q=80');
     }
 
-    .g2 { background-image: linear-gradient(rgba(40,30,24,0.12), rgba(40,30,24,0.12)), url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=80'); }
-    .g3 { background-image: linear-gradient(rgba(40,30,24,0.12), rgba(40,30,24,0.12)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80'); }
-    .g4 { background-image: linear-gradient(rgba(40,30,24,0.12), rgba(40,30,24,0.12)), url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80'); }
-    .g5 { background-image: linear-gradient(rgba(40,30,24,0.12), rgba(40,30,24,0.12)), url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1000&q=80'); }
+    .g2 { background-image: linear-gradient(rgba(40,29,22,0.14), rgba(40,29,22,0.14)), url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80'); }
+    .g3 { background-image: linear-gradient(rgba(40,29,22,0.14), rgba(40,29,22,0.14)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80'); }
+    .g4 { background-image: linear-gradient(rgba(40,29,22,0.14), rgba(40,29,22,0.14)), url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80'); }
+    .g5 { background-image: linear-gradient(rgba(40,29,22,0.14), rgba(40,29,22,0.14)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80'); }
 
     .rsvp-wrap {
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 24px;
+      grid-template-columns: 0.9fr 1.1fr;
       align-items: stretch;
-    }
-
-    .rsvp-card {
-      border-radius: var(--radius-lg);
-      padding: 34px;
     }
 
     .countdown {
@@ -571,20 +640,20 @@
     }
 
     .countdown-box {
-      text-align: center;
       padding: 18px 10px;
+      text-align: center;
       border-radius: 18px;
-      background: rgba(255,255,255,0.5);
-      border: 1px solid rgba(185,151,91,0.14);
+      background: rgba(255,255,255,0.52);
+      border: 1px solid rgba(184,150,84,0.15);
     }
 
     .countdown-box strong {
       display: block;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: var(--gold-deep);
-      line-height: 1;
       margin-bottom: 6px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      line-height: 1;
+      color: var(--gold-deep);
     }
 
     form {
@@ -598,17 +667,12 @@
       gap: 8px;
     }
 
-    label {
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
     input, select, textarea {
       width: 100%;
-      border: 1px solid rgba(92,72,56,0.14);
-      background: rgba(255,255,255,0.68);
-      border-radius: 16px;
       padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(108,84,60,0.14);
+      background: rgba(255,255,255,0.72);
       font: inherit;
       color: var(--text);
       outline: none;
@@ -616,35 +680,29 @@
     }
 
     input:focus, select:focus, textarea:focus {
-      border-color: rgba(185,151,91,0.75);
-      box-shadow: 0 0 0 4px rgba(185,151,91,0.12);
+      border-color: rgba(184,150,84,0.76);
+      box-shadow: 0 0 0 4px rgba(184,150,84,0.12);
     }
 
-    textarea { min-height: 126px; resize: vertical; }
+    textarea { min-height: 130px; resize: vertical; }
 
-    .form-note, .tiny {
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    footer {
-      padding: 30px 0 50px;
-    }
+    footer { padding: 32px 0 56px; }
 
     .footer-grid {
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
-      background: rgba(255,255,255,0.42);
-      border: 1px solid rgba(92,72,56,0.08);
-      border-radius: 28px;
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.48);
+      border: 1px solid rgba(108,84,60,0.08);
       box-shadow: var(--shadow);
-      padding: 28px;
+      padding: 30px;
     }
 
     .footer-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      margin-bottom: 6px;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
     }
 
     .footer-right {
@@ -652,15 +710,9 @@
       color: var(--muted);
     }
 
-    .separator {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(185,151,91,0.45), transparent);
-      margin: 6px 0 14px;
-    }
-
-    @media (max-width: 1024px) {
+    @media (max-width: 1080px) {
       .hero-wrap,
+      .intro-grid,
       .story-grid,
       .schedule-grid,
       .rsvp-wrap,
@@ -688,47 +740,39 @@
 
     @media (max-width: 720px) {
       .nav {
-        align-items: flex-start;
         flex-direction: column;
-        padding: 14px 0;
+        align-items: flex-start;
+        padding: 16px 0;
       }
 
       .menu {
-        gap: 12px 16px;
-        font-size: 0.92rem;
+        gap: 10px 16px;
       }
 
-      .hero { padding-top: 36px; }
+      .hero { padding-top: 40px; }
 
       .hero-card,
       .panel,
       .quote-card,
       .rsvp-card,
-      .card {
-        padding: 24px;
-      }
+      .card,
+      .crest-card { padding: 24px; }
 
       .hero-meta,
       .countdown,
       .info-grid,
       .details-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
+      .gallery-grid { grid-template-columns: 1fr; }
 
       .timeline-item {
         grid-template-columns: 1fr;
         gap: 8px;
       }
 
-      .gallery-item.large {
-        grid-column: span 1;
-      }
-
-      .image-panel { min-height: 360px; }
-
-      h1 { font-size: clamp(2.7rem, 12vw, 4.4rem); }
-      h2 { font-size: clamp(2rem, 10vw, 3rem); }
+      .gallery-item.large { grid-column: span 1; }
+      .image-panel { min-height: 380px; }
+      h1 { font-size: clamp(2.5rem, 12vw, 4.1rem); }
+      h2 { font-size: clamp(2.1rem, 9vw, 3rem); }
     }
   </style>
 </head>
@@ -736,8 +780,8 @@
   <header class="topbar">
     <div class="container nav">
       <div class="brand">
-        <small>Castle Wedding</small>
-        <strong>Anna & Viktor</strong>
+        <small>French Château Wedding</small>
+        <strong>ANNA & VIKTOR</strong>
       </div>
       <nav class="menu" aria-label="Hlavná navigácia">
         <a href="#pribeh">Príbeh</a>
@@ -753,11 +797,11 @@
   <main>
     <section class="hero">
       <div class="container hero-wrap">
-        <div class="hero-card">
-          <div class="eyebrow">Vintage • Elegant • Zámocké</div>
-          <h1>Anna <span style="font-weight:400; color: var(--gold-deep);">&</span> Viktor</h1>
+        <div class="hero-card ornate-frame">
+          <div class="eyebrow">Old Money • French Château • Grand Elegance</div>
+          <h1>Anna <span class="amp">&</span> Viktor</h1>
           <p class="hero-subtitle">
-            Pozývame vás na svadobný deň plný noblesy, sviečok, jemných kvetov a romantickej atmosféry historického zámku.
+            Pozývame vás na svadobný deň inšpirovaný noblesou francúzskeho château — s bohatými detailmi, sviečkami, zlatými akcentmi a romantikou veľkých historických priestorov.
           </p>
 
           <div class="hero-meta">
@@ -767,10 +811,10 @@
             </div>
             <div class="meta-item">
               <span class="meta-label">Miesto</span>
-              <span class="meta-value">Zámok Rosenthal</span>
+              <span class="meta-value">Château de Rosenthal</span>
             </div>
             <div class="meta-item">
-              <span class="meta-label">Začiatok</span>
+              <span class="meta-label">Ceremónia</span>
               <span class="meta-value">14:00</span>
             </div>
           </div>
@@ -781,11 +825,33 @@
           </div>
         </div>
 
-        <div class="hero-image" aria-label="Romantická zámocká svadobná atmosféra">
+        <div class="hero-image ornate-frame" aria-label="Luxusná château svadobná atmosféra">
+          <div class="inner-border"></div>
           <div class="hero-overlay">
-            <span>Miesto oslavy</span>
-            <strong>Zámocká oranžéria a historická sála</strong>
+            <span>Slávnostné priestory</span>
+            <strong>Zámocké schodisko, oranžéria a večera pri sviečkach</strong>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container intro-grid">
+        <div class="crest-card ornate-frame">
+          <div class="crest">
+            <div>
+              <small>Maison de Mariage</small>
+              <strong>A&nbsp;V</strong>
+              <span>Septembre 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-card ornate-frame">
+          <blockquote>
+            „Niečo z histórie, niečo z noblesy, niečo zo sna — a uprostred toho náš deň.“
+          </blockquote>
+          <p>Old money romantika • château atmosféra • nadčasová elegancia</p>
         </div>
       </div>
     </section>
@@ -794,61 +860,50 @@
       <div class="container">
         <div class="section-head">
           <span class="ornament">Náš príbeh</span>
-          <h2>Láska s nádychom času</h2>
+          <h2>Romantika s noblesou starého sveta</h2>
           <p>
-            Jemný vintage koncept spája historickú eleganciu, romantické detaily a zámockú noblesu do jedného výnimočného svadobného dňa.
+            Tento koncept je postavený na estetike starých aristokratických sídiel, francúzskych interiérov, mäkkého svetla a detailov, ktoré pôsobia luxusne aj bez okázalosti.
           </p>
         </div>
 
         <div class="story-grid">
           <div class="image-panel"></div>
 
-          <div class="panel">
+          <div class="panel ornate-frame">
             <p class="dropcap">
-              Náš príbeh začal celkom nenápadne, no od prvého stretnutia mal v sebe niečo výnimočné. Postupne sa z krátkych rozhovorov stali dlhé večery, z úsmevov istota a z náhodného stretnutia láska, ktorú dnes oslavujeme.
+              Od prvých chvíľ sme vedeli, že náš svadobný deň nechceme poňať len ako oslavu, ale ako zážitok s atmosférou. Taký, ktorý bude mať pokoj, krásu, eleganciu a jemný pocit starého sveta.
             </p>
             <p>
-              Pre náš svadobný deň sme si vybrali zámocký štýl, pretože v sebe nesie presne tú atmosféru, ktorú milujeme — pokoj, krásu, tradíciu a neopakovateľné čaro starých priestorov.
+              Preto vznikla predstava svadby inšpirovanej francúzskym château — s historickými priestormi, symetriou, tlmenou farebnosťou, kvetmi v klasickom štýle a večerou, ktorá bude pôsobiť ako scéna z romantického filmu.
             </p>
             <p>
-              Tešíme sa, že tento deň prežijeme spolu s vami pri slávnostnej ceremónii, večeri pri sviečkach a tanci pod vysokými stropmi historickej sály.
+              Tešíme sa, že práve s vami vytvoríme deň, ktorý bude nadčasový, slávnostný a nezabudnuteľný v každom detaile.
             </p>
 
             <div class="timeline">
               <div class="timeline-item">
                 <div class="timeline-time">2019</div>
                 <div>
-                  <h3>Prvé stretnutie</h3>
-                  <p>Od prvého momentu sme vedeli, že toto nebude len obyčajné zoznámenie.</p>
+                  <h3>Začiatok</h3>
+                  <p>Prvé stretnutie prinieslo pokojný pocit, že sa začína niečo výnimočné.</p>
                 </div>
               </div>
               <div class="timeline-item">
                 <div class="timeline-time">2024</div>
                 <div>
                   <h3>Zásnuby</h3>
-                  <p>Na mieste plnom emócií, svetiel a ticha padla otázka, na ktorú prišla tá najkrajšia odpoveď.</p>
+                  <p>V komornom, krásnom momente sme si povedali áno spoločnej budúcnosti.</p>
                 </div>
               </div>
               <div class="timeline-item">
                 <div class="timeline-time">2026</div>
                 <div>
-                  <h3>Náš deň</h3>
-                  <p>Začíname novú kapitolu a budeme šťastní, ak pri tom budete s nami.</p>
+                  <h3>Le grand jour</h3>
+                  <p>Deň, v ktorom sa história priestoru spojí s naším vlastným príbehom.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="quote-card">
-          <blockquote>
-            „V starých múroch je ukrytá história. V našom dni bude ukrytá láska.“
-          </blockquote>
-          <p>September 2026 • Zámocká svadba</p>
         </div>
       </div>
     </section>
@@ -857,66 +912,66 @@
       <div class="container">
         <div class="section-head">
           <span class="ornament">Svadobný deň</span>
-          <h2>Harmonogram</h2>
+          <h2>Harmonogram oslavy</h2>
           <p>
-            Slávnostný priebeh dňa sme pripravili tak, aby mal eleganciu, pokojný rytmus a dostatok priestoru na spoločné zážitky.
+            Plynulý program s dôrazom na slávnostnú atmosféru, pohodlie hostí a krásne prepojenie ceremónie, večere aj večernej oslavy.
           </p>
         </div>
 
         <div class="schedule-grid">
-          <div class="card">
+          <div class="card ornate-frame">
             <div class="icon-badge">✦</div>
-            <h3>Obrad a prípitok</h3>
+            <h3>Ceremónia</h3>
             <div class="separator"></div>
             <div class="timeline">
               <div class="timeline-item">
-                <div class="timeline-time">14:00</div>
+                <div class="timeline-time">13:30</div>
                 <div>
                   <h3>Príchod hostí</h3>
-                  <p>Privítanie hostí v zámockom nádvorí s jemným hudobným sprievodom.</p>
+                  <p>Privítanie v nádvorí château s hudbou a pohárom prosecca.</p>
                 </div>
               </div>
               <div class="timeline-item">
-                <div class="timeline-time">14:30</div>
+                <div class="timeline-time">14:00</div>
                 <div>
                   <h3>Obrad</h3>
-                  <p>Slávnostná ceremónia v historickej kaplnke alebo v záhrade zámku.</p>
+                  <p>Slávnostná ceremónia v záhradách alebo v historickej sále.</p>
                 </div>
               </div>
               <div class="timeline-item">
-                <div class="timeline-time">15:15</div>
+                <div class="timeline-time">15:00</div>
                 <div>
                   <h3>Prípitok</h3>
-                  <p>Spoločný prípitok, gratulácie a prvé fotografie v zámockých priestoroch.</p>
+                  <p>Gratulácie, spoločný prípitok a portréty v reprezentatívnych priestoroch.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="card">
+          <div class="card ornate-frame">
             <div class="icon-badge">❦</div>
-            <h3>Večera a oslava</h3>
+            <h3>Večerná oslava</h3>
             <div class="separator"></div>
             <div class="timeline">
               <div class="timeline-item">
-                <div class="timeline-time">17:00</div>
+                <div class="timeline-time">17:30</div>
                 <div>
-                  <h3>Slávnostná večera</h3>
-                  <p>Servírované menu v zámockej sále s romantickou výzdobou pri sviečkach.</p>
+                  <h3>Večera</h3>
+                  <p>Slávnostné menu v dlhej sále s kvetmi, svietnikmi a zlatými detailmi.</p>
                 </div>
               </div>
               <div class="timeline-item">
-                <div class="timeline-time">19:00</div>
+                <div class="timeline-time">19:30</div>
                 <div>
                   <h3>Prvý tanec</h3>
-                  <p>Otvorenie večera naším prvým tancom a následnou zábavou pre všetkých hostí.</p>
+                  <p>Otvorenie večera v noblesnej atmosfére historického interiéru.</p>
                 </div>
               </div>
               <div class="timeline-item">
                 <div class="timeline-time">22:00</div>
                 <div>
-                  <h3>Torta a nočný program</h3>
-                  <p>Krátky sladký moment, hudba, tanec a pokračovanie oslavy do noci.</p>
+                  <h3>Torta & tanec</h3>
+                  <p>Sladký moment, hudba a pokračovanie oslavy do neskorej noci.</p>
                 </div>
               </div>
             </div>
@@ -929,27 +984,27 @@
       <div class="container">
         <div class="section-head">
           <span class="ornament">Miesto konania</span>
-          <h2>Zámok Rosenthal</h2>
+          <h2>Château de Rosenthal</h2>
           <p>
-            Historické priestory, vysoké stropy, záhradné terasy a svetlo sviečok vytvoria kulisu presne pre vintage svadbu s noblesou.
+            Vysoké stropy, francúzske okná, záhradné terasy, symetria priestorov a mäkké večerné svetlo vytvárajú ideálne kulisy pre aristokratický svadobný dizajn.
           </p>
         </div>
 
         <div class="info-grid">
-          <div class="card">
+          <div class="card ornate-frame">
             <div class="icon-badge">⌂</div>
             <h3>Adresa</h3>
-            <p>Zámok Rosenthal<br>Hlavná 18<br>900 01 Historické Mesto</p>
+            <p>Château de Rosenthal<br>Allée des Fleurs 18<br>900 01 Historické Mesto</p>
           </div>
-          <div class="card">
-            <div class="icon-badge">✧</div>
-            <h3>Atmosféra</h3>
-            <p>Krémová paleta, antické detaily, zlato, tlmené osvetlenie a elegantné florálne aranžmány.</p>
+          <div class="card ornate-frame">
+            <div class="icon-badge">♕</div>
+            <h3>Estetika</h3>
+            <p>Ivory, champagne, antique gold, jemné kvety, klasické siluety a dôraz na rafinované detaily.</p>
           </div>
-          <div class="card">
+          <div class="card ornate-frame">
             <div class="icon-badge">✉</div>
             <h3>Kontakt</h3>
-            <p>Ak budete potrebovať pomoc s dopravou alebo ubytovaním, kontaktujte nás na:<br><strong>annaaviktor@email.sk</strong></p>
+            <p>Pre pomoc s dopravou alebo ubytovaním nás kontaktujte na:<br><strong>annaaviktor@email.sk</strong></p>
           </div>
         </div>
       </div>
@@ -961,25 +1016,25 @@
           <span class="ornament">Praktické informácie</span>
           <h2>Detaily pre hostí</h2>
           <p>
-            Všetko dôležité na jednom mieste, aby ste si náš deň mohli užiť pohodlne a bez starostí.
+            Všetko podstatné, zladené s celkovým luxusným štýlom svadby a pohodlím pre všetkých pozvaných hostí.
           </p>
         </div>
 
         <div class="details-grid">
-          <div class="card">
-            <div class="icon-badge">♛</div>
+          <div class="card ornate-frame">
+            <div class="icon-badge">✧</div>
             <h3>Dress code</h3>
-            <p>Elegant / formal. Odporúčame tlmené farby, jemné tóny a nadčasové kúsky vhodné do historického prostredia.</p>
+            <p>Black tie optional / formal elegance. Odporúčame klasické siluety, tlmené tóny a nadčasové materiály.</p>
           </div>
-          <div class="card">
-            <div class="icon-badge">☽</div>
+          <div class="card ornate-frame">
+            <div class="icon-badge">☾</div>
             <h3>Ubytovanie</h3>
-            <p>Pre hostí budú rezervované izby priamo v areáli zámku a v neďalekom penzióne. Podrobnosti doplníme včas.</p>
+            <p>Časť hostí bude ubytovaná priamo v areáli château, ďalšie možnosti budú pripravené v blízkom okolí.</p>
           </div>
-          <div class="card">
+          <div class="card ornate-frame">
             <div class="icon-badge">❁</div>
             <h3>Dary</h3>
-            <p>Najväčším darom bude vaša prítomnosť. Ak nás však budete chcieť potešiť, oceníme finančný príspevok na spoločné zážitky.</p>
+            <p>Vaša prítomnosť je pre nás najväčšou radosťou. Ak nás chcete potešiť aj darom, oceníme príspevok na spoločné cesty a zážitky.</p>
           </div>
         </div>
       </div>
@@ -988,10 +1043,10 @@
     <section id="galeria">
       <div class="container">
         <div class="section-head">
-          <span class="ornament">Inšpirácia</span>
-          <h2>Vintage nálada</h2>
+          <span class="ornament">Atmosféra</span>
+          <h2>Old money château nálada</h2>
           <p>
-            Ukážka atmosféry, ktorú tento dizajn prináša — romantika, historické priestory a jemná luxusná estetika.
+            Bohatší, dekoratívnejší vizuál, ktorý spája romantickú aristokratickú eleganciu s jemným luxusom a francúzskym charakterom.
           </p>
         </div>
 
@@ -1007,7 +1062,7 @@
 
     <section id="rsvp">
       <div class="container rsvp-wrap">
-        <div class="rsvp-card">
+        <div class="rsvp-card ornate-frame">
           <span class="ornament">Potvrdenie účasti</span>
           <h2>RSVP</h2>
           <p>
@@ -1034,7 +1089,7 @@
           </div>
         </div>
 
-        <div class="rsvp-card">
+        <div class="rsvp-card ornate-frame">
           <span class="ornament">Odpoveď</span>
           <h2>Dajte nám vedieť</h2>
           <form>
@@ -1062,7 +1117,7 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Odoslať RSVP</button>
-            <div class="form-note">Tlačidlo je zatiaľ len vizuálne. Napojenie na Formspree, Netlify Forms alebo Google Forms sa dá doplniť neskôr.</div>
+            <div class="form-note">Tlačidlo je zatiaľ len vizuálne. Neskôr viem doplniť aj reálne odosielanie formulára.</div>
           </form>
         </div>
       </div>
@@ -1071,18 +1126,18 @@
 
   <footer>
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid ornate-frame">
         <div>
           <div class="brand">
-            <small>Ďakujeme</small>
-            <div class="footer-name">Anna & Viktor</div>
+            <small>Merci</small>
+            <div class="footer-name">ANNA & VIKTOR</div>
           </div>
-          <p class="tiny">Tešíme sa, že s nami vytvoríte spomienku na deň, ktorý si budeme pamätať navždy.</p>
+          <p class="tiny">Tešíme sa, že s nami prežijete deň plný noblesy, romantiky a krásnych spomienok.</p>
         </div>
         <div class="footer-right">
           <p>12. september 2026</p>
-          <p>Zámok Rosenthal</p>
-          <p>Vintage Castle Wedding</p>
+          <p>Château de Rosenthal</p>
+          <p>Old Money Wedding Aesthetic</p>
         </div>
       </div>
     </div>
