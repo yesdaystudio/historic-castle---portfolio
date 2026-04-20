@@ -710,3 +710,421 @@
 
       .hero-meta,
       .countdown,
+      .info-grid,
+      .details-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .gallery-item.large {
+        grid-column: span 1;
+      }
+
+      .image-panel { min-height: 360px; }
+
+      h1 { font-size: clamp(2.7rem, 12vw, 4.4rem); }
+      h2 { font-size: clamp(2rem, 10vw, 3rem); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <small>Castle Wedding</small>
+        <strong>Anna & Viktor</strong>
+      </div>
+      <nav class="menu" aria-label="Hlavná navigácia">
+        <a href="#pribeh">Príbeh</a>
+        <a href="#harmonogram">Harmonogram</a>
+        <a href="#miesto">Miesto</a>
+        <a href="#detaily">Detaily</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-card">
+          <div class="eyebrow">Vintage • Elegant • Zámocké</div>
+          <h1>Anna <span style="font-weight:400; color: var(--gold-deep);">&</span> Viktor</h1>
+          <p class="hero-subtitle">
+            Pozývame vás na svadobný deň plný noblesy, sviečok, jemných kvetov a romantickej atmosféry historického zámku.
+          </p>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Dátum</span>
+              <span class="meta-value">12. september 2026</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Miesto</span>
+              <span class="meta-value">Zámok Rosenthal</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Začiatok</span>
+              <span class="meta-value">14:00</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#rsvp">Potvrdiť účasť</a>
+            <a class="btn btn-secondary" href="#harmonogram">Pozrieť program</a>
+          </div>
+        </div>
+
+        <div class="hero-image" aria-label="Romantická zámocká svadobná atmosféra">
+          <div class="hero-overlay">
+            <span>Miesto oslavy</span>
+            <strong>Zámocká oranžéria a historická sála</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pribeh">
+      <div class="container">
+        <div class="section-head">
+          <span class="ornament">Náš príbeh</span>
+          <h2>Láska s nádychom času</h2>
+          <p>
+            Jemný vintage koncept spája historickú eleganciu, romantické detaily a zámockú noblesu do jedného výnimočného svadobného dňa.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <div class="image-panel"></div>
+
+          <div class="panel">
+            <p class="dropcap">
+              Náš príbeh začal celkom nenápadne, no od prvého stretnutia mal v sebe niečo výnimočné. Postupne sa z krátkych rozhovorov stali dlhé večery, z úsmevov istota a z náhodného stretnutia láska, ktorú dnes oslavujeme.
+            </p>
+            <p>
+              Pre náš svadobný deň sme si vybrali zámocký štýl, pretože v sebe nesie presne tú atmosféru, ktorú milujeme — pokoj, krásu, tradíciu a neopakovateľné čaro starých priestorov.
+            </p>
+            <p>
+              Tešíme sa, že tento deň prežijeme spolu s vami pri slávnostnej ceremónii, večeri pri sviečkach a tanci pod vysokými stropmi historickej sály.
+            </p>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-time">2019</div>
+                <div>
+                  <h3>Prvé stretnutie</h3>
+                  <p>Od prvého momentu sme vedeli, že toto nebude len obyčajné zoznámenie.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">2024</div>
+                <div>
+                  <h3>Zásnuby</h3>
+                  <p>Na mieste plnom emócií, svetiel a ticha padla otázka, na ktorú prišla tá najkrajšia odpoveď.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">2026</div>
+                <div>
+                  <h3>Náš deň</h3>
+                  <p>Začíname novú kapitolu a budeme šťastní, ak pri tom budete s nami.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="quote-card">
+          <blockquote>
+            „V starých múroch je ukrytá história. V našom dni bude ukrytá láska.“
+          </blockquote>
+          <p>September 2026 • Zámocká svadba</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="harmonogram">
+      <div class="container">
+        <div class="section-head">
+          <span class="ornament">Svadobný deň</span>
+          <h2>Harmonogram</h2>
+          <p>
+            Slávnostný priebeh dňa sme pripravili tak, aby mal eleganciu, pokojný rytmus a dostatok priestoru na spoločné zážitky.
+          </p>
+        </div>
+
+        <div class="schedule-grid">
+          <div class="card">
+            <div class="icon-badge">✦</div>
+            <h3>Obrad a prípitok</h3>
+            <div class="separator"></div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-time">14:00</div>
+                <div>
+                  <h3>Príchod hostí</h3>
+                  <p>Privítanie hostí v zámockom nádvorí s jemným hudobným sprievodom.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">14:30</div>
+                <div>
+                  <h3>Obrad</h3>
+                  <p>Slávnostná ceremónia v historickej kaplnke alebo v záhrade zámku.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">15:15</div>
+                <div>
+                  <h3>Prípitok</h3>
+                  <p>Spoločný prípitok, gratulácie a prvé fotografie v zámockých priestoroch.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="icon-badge">❦</div>
+            <h3>Večera a oslava</h3>
+            <div class="separator"></div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-time">17:00</div>
+                <div>
+                  <h3>Slávnostná večera</h3>
+                  <p>Servírované menu v zámockej sále s romantickou výzdobou pri sviečkach.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">19:00</div>
+                <div>
+                  <h3>Prvý tanec</h3>
+                  <p>Otvorenie večera naším prvým tancom a následnou zábavou pre všetkých hostí.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-time">22:00</div>
+                <div>
+                  <h3>Torta a nočný program</h3>
+                  <p>Krátky sladký moment, hudba, tanec a pokračovanie oslavy do noci.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="miesto">
+      <div class="container">
+        <div class="section-head">
+          <span class="ornament">Miesto konania</span>
+          <h2>Zámok Rosenthal</h2>
+          <p>
+            Historické priestory, vysoké stropy, záhradné terasy a svetlo sviečok vytvoria kulisu presne pre vintage svadbu s noblesou.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <div class="card">
+            <div class="icon-badge">⌂</div>
+            <h3>Adresa</h3>
+            <p>Zámok Rosenthal<br>Hlavná 18<br>900 01 Historické Mesto</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge">✧</div>
+            <h3>Atmosféra</h3>
+            <p>Krémová paleta, antické detaily, zlato, tlmené osvetlenie a elegantné florálne aranžmány.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge">✉</div>
+            <h3>Kontakt</h3>
+            <p>Ak budete potrebovať pomoc s dopravou alebo ubytovaním, kontaktujte nás na:<br><strong>annaaviktor@email.sk</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="detaily">
+      <div class="container">
+        <div class="section-head">
+          <span class="ornament">Praktické informácie</span>
+          <h2>Detaily pre hostí</h2>
+          <p>
+            Všetko dôležité na jednom mieste, aby ste si náš deň mohli užiť pohodlne a bez starostí.
+          </p>
+        </div>
+
+        <div class="details-grid">
+          <div class="card">
+            <div class="icon-badge">♛</div>
+            <h3>Dress code</h3>
+            <p>Elegant / formal. Odporúčame tlmené farby, jemné tóny a nadčasové kúsky vhodné do historického prostredia.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge">☽</div>
+            <h3>Ubytovanie</h3>
+            <p>Pre hostí budú rezervované izby priamo v areáli zámku a v neďalekom penzióne. Podrobnosti doplníme včas.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge">❁</div>
+            <h3>Dary</h3>
+            <p>Najväčším darom bude vaša prítomnosť. Ak nás však budete chcieť potešiť, oceníme finančný príspevok na spoločné zážitky.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <span class="ornament">Inšpirácia</span>
+          <h2>Vintage nálada</h2>
+          <p>
+            Ukážka atmosféry, ktorú tento dizajn prináša — romantika, historické priestory a jemná luxusná estetika.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item large"></div>
+          <div class="gallery-item g2"></div>
+          <div class="gallery-item g3"></div>
+          <div class="gallery-item g4"></div>
+          <div class="gallery-item g5"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="container rsvp-wrap">
+        <div class="rsvp-card">
+          <span class="ornament">Potvrdenie účasti</span>
+          <h2>RSVP</h2>
+          <p>
+            Budeme radi, ak nám svoju účasť potvrdíte najneskôr do <strong>30. júna 2026</strong>.
+          </p>
+
+          <div class="countdown" id="countdown">
+            <div class="countdown-box">
+              <strong id="days">00</strong>
+              <span>Dní</span>
+            </div>
+            <div class="countdown-box">
+              <strong id="hours">00</strong>
+              <span>Hodín</span>
+            </div>
+            <div class="countdown-box">
+              <strong id="minutes">00</strong>
+              <span>Minút</span>
+            </div>
+            <div class="countdown-box">
+              <strong id="seconds">00</strong>
+              <span>Sekúnd</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rsvp-card">
+          <span class="ornament">Odpoveď</span>
+          <h2>Dajte nám vedieť</h2>
+          <form>
+            <div class="field">
+              <label for="name">Meno a priezvisko</label>
+              <input id="name" type="text" placeholder="Vaše meno" />
+            </div>
+
+            <div class="field">
+              <label for="attendance">Účasť</label>
+              <select id="attendance">
+                <option>Prídem s radosťou</option>
+                <option>Žiaľ, nemôžem prísť</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="guests">Počet osôb</label>
+              <input id="guests" type="number" min="1" max="6" value="1" />
+            </div>
+
+            <div class="field">
+              <label for="message">Poznámka / alergie / odkaz</label>
+              <textarea id="message" placeholder="Napíšte nám čokoľvek dôležité..."></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Odoslať RSVP</button>
+            <div class="form-note">Tlačidlo je zatiaľ len vizuálne. Napojenie na Formspree, Netlify Forms alebo Google Forms sa dá doplniť neskôr.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <small>Ďakujeme</small>
+            <div class="footer-name">Anna & Viktor</div>
+          </div>
+          <p class="tiny">Tešíme sa, že s nami vytvoríte spomienku na deň, ktorý si budeme pamätať navždy.</p>
+        </div>
+        <div class="footer-right">
+          <p>12. september 2026</p>
+          <p>Zámok Rosenthal</p>
+          <p>Vintage Castle Wedding</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const weddingDate = new Date('2026-09-12T14:00:00');
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      daysEl.textContent = String(days).padStart(2, '0');
+      hoursEl.textContent = String(hours).padStart(2, '0');
+      minutesEl.textContent = String(minutes).padStart(2, '0');
+      secondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('RSVP formulár je pripravený na dizajnovej úrovni. Ak chceš, doplním aj reálne odosielanie.');
+    });
+  </script>
+</body>
+</html>
